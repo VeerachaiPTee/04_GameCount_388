@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <div class="outer2 button2">
+            <button>Like = 10 , Love = 20 , Laugh = 25 , Wow = 30 , Sad = -15 , Angry = -50</button>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="centerbox">
+            <div class="outer button">
+                <button @click="like1()">{{like}}</button>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="outer button">
+                <button @click="love1()">{{love}}</button>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="outer button">
+                <button @click="laugh1()">{{laugh}}</button>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="outer button">
+                <button @click="wow1()">{{wow}}</button>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="outer button">
+                <button @click="sad1()">{{sad}}</button>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="outer button">
+                <button @click="angry1()">{{angry}}</button>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <br>
+
+        <center class="outer1 button1">
+            <button>{{score}}</button>
+            <span></span>
+            <span></span>
+        </center>
+    </div>
+
+    
+</body>
+
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            like:"👍",
+            love:"🤍",
+            laugh:"😆",
+            wow:"😲",
+            sad:"😭",
+            angry:"😡",
+            score:0
+        },
+        methods: {
+            like1:function(){
+                this.score+=10;
+            },
+            love1:function(){
+                this.score+=20;
+            },
+            laugh1:function(){
+                this.score+=25;
+            },
+            wow1:function(){
+                this.score+=30;
+            },
+            sad1:function(){
+                this.score-=15;
+            },
+            angry1:function(){
+                this.score-=50;
+            }
+        },
+    })
+</script>
+</html>
